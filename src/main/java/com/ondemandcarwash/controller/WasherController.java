@@ -36,6 +36,11 @@ public class WasherController {
 	@Autowired
 	private WasherRepository washerRepository;
 	
+	@GetMapping("/msg")
+	public String message() {
+		return "Hello! Welcome form Washer page";
+	}
+	
 	    //Creating/Adding Washer
 		@PostMapping("/addwasher")
 		public Washer saveWasher(@RequestBody Washer washer) 
